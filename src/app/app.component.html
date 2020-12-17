@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="form-container">
+    <h1>Form Title</h1>
+    <div class="inputs">
+      <app-text-input label="Custom Label" [(value)]="firstInput" [isInvalid]="isSubmitted && !firstInput"></app-text-input>
+      <app-text-input label="Custom Label" [(value)]="secondInput" [isInvalid]="isSubmitted && !secondInput"></app-text-input>
+    </div>
+    <div class="radio-container">
+      <div>
+        <p>Experience with Angular 10-11</p>
+        <mat-radio-group>
+          <app-radio-input label="No" value="no"></app-radio-input>
+          <app-radio-input label="Yes" value="yes" [checked]="true"></app-radio-input>
+        </mat-radio-group>        
+      </div>
+      <div>
+        <p>Estimate for the task - 4h</p>
+        <mat-radio-group>
+          <app-radio-input label="No" value="no"></app-radio-input>
+          <app-radio-input label="Yes" value="yes" [checked]="true"></app-radio-input>
+        </mat-radio-group>   
+      </div>
+    </div>
+    <app-text-input class="app-text-input" label="Custom Label" [(value)]="thirdInput" [isInvalid]="isSubmitted && !thirdInput"></app-text-input>
+    <app-text-input class="app-text-input" label="Custom Label" [(value)]="fourthInput" [isInvalid]="isSubmitted && !fourthInput"></app-text-input>
+    <app-text-input label="Custom Label" [(value)]="fifthInput" [isInvalid]="isSubmitted && !fifthInput"></app-text-input>
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="clickNext($event)">Next</button>
+    </div>
+  </div>
+</div>
